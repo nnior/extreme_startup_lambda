@@ -1,4 +1,4 @@
-service: aws-java-simple-los-tres-mosqueteros
+service: aws-java-simple-lostresmosqueteros
 
 frameworkVersion: ">=2.0.0"
 
