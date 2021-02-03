@@ -13,8 +13,13 @@ public class ResponderModel {
         }
 
         Matcher sumMatcher = Pattern.compile(".*what is (\\d+) plus (\\d+)").matcher(question);
+        Matcher largeMatcher = Pattern.compile(".*which of the following numbers is the largest: (\\d+), (\\d+)").matcher(question);
+
         if (sumMatcher.matches()) {
             return String.valueOf(Integer.parseInt(sumMatcher.group(1)) + Integer.parseInt(sumMatcher.group(2)));
+        }
+        if (largeMatcher.matches()) {
+            return String.valueOf(Math.max(Integer.parseInt(largeMatcher.group(1)), Integer.parseInt(largeMatcher.group(2))));
         }
 
         return teamName;

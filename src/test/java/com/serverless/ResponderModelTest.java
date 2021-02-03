@@ -13,4 +13,12 @@ public class ResponderModelTest {
         assertThat(respuesta).isEqualTo("15");
     }
 
+    @Test
+    public void  cualEsElNumeroMayor(){
+        ResponderModel responder = new ResponderModel();
+        String pregunta = "which of the following numbers is the largest: 67, 35";
+        String respuesta = responder.answer(pregunta);
+        assertThat(respuesta).isEqualTo("67");
+    }
+
 }
