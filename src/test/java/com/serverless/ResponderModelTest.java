@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ResponderModelTest {
 
     @Test
-    public void  sumaDe1Mas14Test(){
+    public void  sumaDe1Mas14Test() {
         ResponderModel responder = new ResponderModel();
         String pregunta = "what is 1 plus 14";
         String respuesta = responder.answer(pregunta);
@@ -19,6 +19,14 @@ public class ResponderModelTest {
         String pregunta = "which of the following numbers is the largest: 67, 35";
         String respuesta = responder.answer(pregunta);
         assertThat(respuesta).isEqualTo("67");
+    }
+
+    @Test
+    public void  cualEsElNumeroMayor4(){
+        ResponderModel responder = new ResponderModel();
+        String pregunta = "which of the following numbers is the largest: 55, 119, 291, 24";
+        String respuesta = responder.answer(pregunta);
+        assertThat(respuesta).isEqualTo("291");
     }
 
 }
